@@ -26,7 +26,7 @@ function App() {
       <header className="relative h-screen flex items-center justify-center text-center">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
+            src="/bg.png"
             alt="背景"
             className="w-full h-full object-cover"
           />

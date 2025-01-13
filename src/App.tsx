@@ -26,7 +26,7 @@ function App() {
       <header className="relative h-screen flex items-center justify-center text-center">
         <div className="absolute inset-0">
           <img
-            src="./bg.png"
+            src="https://raw.kkgithub.com/Mentha-mc/mentha-mc.github.io/refs/heads/main/bg.png"
             alt="背景"
             className="w-full h-full object-cover"
           />

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const avatarUrl = '/icon.png'
+const avatarUrl = 'https://i0.hdslb.com/bfs/new_dyn/397195182099bbe5a82abe9f1fdeccf02140663131.png'
 </script>
 
 <template>
@@ -13,12 +13,14 @@ const avatarUrl = '/icon.png'
         </div>
       </div>
     </div>
-    <h1>Mentha</h1>
-    <p class="subtitle">Full Stack Developer</p>
-    <div class="header-decoration">
-      <div class="line"></div>
-      <div class="dot"></div>
-      <div class="line"></div>
+    <div class="title-wrapper">
+      <h1>Mentha</h1>
+      <p class="subtitle">Full Stack Developer</p>
+      <div class="header-decoration">
+        <div class="line"></div>
+        <div class="dot"></div>
+        <div class="line"></div>
+      </div>
     </div>
   </header>
 </template>
@@ -28,6 +30,16 @@ const avatarUrl = '/icon.png'
   text-align: center;
   padding: 3rem 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .avatar-wrapper {
@@ -156,6 +168,8 @@ h1 {
   position: relative;
   display: inline-block;
   text-shadow: 0 0 30px rgba(66, 184, 131, 0.2);
+  text-align: center;
+  width: auto;
 }
 
 h1::after {
@@ -193,6 +207,8 @@ h1:hover::after {
   opacity: 0;
   transform: translateY(10px);
   animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.3s;
+  text-align: center;
+  width: 100%;
 }
 
 @keyframes fadeIn {
@@ -211,6 +227,7 @@ h1:hover::after {
   opacity: 0;
   transform: translateY(10px);
   animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.6s;
+  width: 100%;
 }
 
 .line {
@@ -259,5 +276,25 @@ h1:hover::after {
 .header:hover .dot::after {
   opacity: 1;
   transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .avatar-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .avatar-container {
+    width: 100px;
+    height: 100px;
+  }
 }
 </style>

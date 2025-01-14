@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const avatarUrl = 'https://i0.hdslb.com/bfs/new_dyn/397195182099bbe5a82abe9f1fdeccf02140663131.png'
+const avatarUrl = 'https://raw.githubusercontent.com/Mentha-mc/mentha-mc.github.io/refs/heads/main/icon.png'
 </script>
 
 <template>

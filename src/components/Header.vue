@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const avatarUrl = 'https://raw.githubusercontent.com/Mentha-mc/mentha-mc.github.io/refs/heads/main/icon.png'
+const avatarUrl = 'https://gh.api.99988866.xyz/https://raw.githubusercontent.com/Mentha-mc/mentha-mc.github.io/refs/heads/main/icon.png'
 </script>
 
 <template>

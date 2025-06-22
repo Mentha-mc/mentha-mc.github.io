@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentha - 我的世界中国版开发者</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background: #4CAF50;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .name {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .skill h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .project h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat {
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4CAF50;
+            display: block;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            margin: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            .name {
+                font-size: 2rem;
+            }
+            
+            .skills,
+            .projects {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="avatar">M</div>
+            <h1 class="name">Mentha</h1>
+            <p class="title">我的世界中国版开发者</p>
+        </div>
+
+        <div class="section">
+            <h2>关于我</h2>
+            <p>专注于《我的世界》中国版的模组和插件开发，致力于为玩家创造更好的游戏体验。拥有多年开发经验，熟悉各种开发技术和工具。</p>
+        </div>
+
+        <div class="section">
+            <h2>专业技能</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>模组开发</h3>
+                    <p>Forge/Fabric模组开发</p>
+                </div>
+                <div class="skill">
+                    <h3>插件开发</h3>
+                    <p>服务器插件和工具</p>
+                </div>
+                <div class="skill">
+                    <h3>性能优化</h3>
+                    <p>游戏性能调优</p>
+                </div>
+                <div class="skill">
+                    <h3>UI设计</h3>
+                    <p>用户界面开发</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>主要项目</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>建筑助手模组</h3>
+                    <p>简化建筑过程的实用工具模组</p>
+                </div>
+                <div class="project">
+                    <h3>RPG系统</h3>
+                    <p>为游戏添加RPG元素和技能系统</p>
+                </div>
+                <div class="project">
+                    <h3>服务器管理插件</h3>
+                    <p>提升服务器管理效率的工具集</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>数据统计</h2>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">30+</span>
+                    <span>发布项目</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">500K+</span>
+                    <span>下载量</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3年+</span>
+                    <span>开发经验</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section contact">
+            <h2>联系我</h2>
+            <a href="#" class="contact-btn">邮箱</a>
+            <a href="#" class="contact-btn">QQ</a>
+            <a href="#" class="contact-btn">GitHub</a>
+        </div>
+    </div>
+</body>
+</html>

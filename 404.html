@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404 - Page Not Found | Nuxt</title>
+    <style type="text/css">
+        .spotlight {
+            background: linear-gradient(45deg, #00bcd4, #673ab7 50%, #3f51b5);
+            filter: blur(20vh);
+            animation: gradientMove 15s ease infinite;
+            transform-origin: center;
+        }
+        .bg-white {
+            --tw-bg-opacity: 1;
+            background-color: #fff;
+            background-color: rgba(255, 255, 255, var(--tw-bg-opacity))
+        }
+        .grid {
+            display: grid
+        }
+        .place-content-center {
+            place-content: center
+        }
+        .font-sans {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji
+        }
+        .font-medium {
+            font-weight: 500
+        }
+        .font-light {
+            font-weight: 300
+        }
+        .h-1\/2 {
+            height: 50%
+        }
+        .text-8xl {
+            font-size: 6rem;
+            line-height: 1
+        }
+        .text-xl {
+            font-size: 1.25rem;
+            line-height: 1.75rem
+        }
+        .leading-tight {
+            line-height: 1.25
+        }
+        .mb-8 {
+            margin-bottom: 2rem
+        }
+        .mb-16 {
+            margin-bottom: 4rem
+        }
+        .max-w-520px {
+            max-width: 520px
+        }
+        .min-h-screen {
+            min-height: 100vh
+        }
+        .overflow-hidden {
+            overflow: hidden
+        }
+        .px-8 {
+            padding-left: 2rem;
+            padding-right: 2rem
+        }
+        .fixed {
+            position: fixed
+        }
+        .left-0 {
+            left: 0
+        }
+        .right-0 {
+            right: 0
+        }
+        .-bottom-1\/2 {
+            bottom: -50%
+        }
+        .text-center {
+            text-align: center
+        }
+        .text-black {
+            --tw-text-opacity: 1;
+            color: #000;
+            color: rgba(0, 0, 0, var(--tw-text-opacity))
+        }
+        .antialiased {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
+        @keyframes gradientMove {
+            0% {
+                transform: scale(1);
+                background-position: 0% 50%;
+            }
+            50% {
+                transform: scale(1.2);
+                background-position: 100% 50%;
+            }
+            100% {
+                transform: scale(1);
+                background-position: 0% 50%;
+            }
+        }
+        @media (min-width: 640px) {
+            .sm\:text-4xl {
+                font-size: 2.25rem;
+                line-height: 2.5rem
+            }
+            .sm\:text-10xl {
+                font-size: 10rem;
+                line-height: 1
+            }
+            .sm\:px-0 {
+                padding-left: 0;
+                padding-right: 0
+            }
+        }
+        @media (prefers-color-scheme: dark) {
+            .dark\:bg-black {
+                --tw-bg-opacity: 1;
+                background-color: #000;
+                background-color: rgba(0, 0, 0, var(--tw-bg-opacity))
+            }
+            .dark\:text-white {
+                --tw-text-opacity: 1;
+                color: #fff;
+                color: rgba(255, 255, 255, var(--tw-text-opacity))
+            }
+        }
+    </style>
+    <style>
+        *, :before, :after {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e0e0e0
+        }
+        * {
+            --tw-ring-inset: var(--tw-empty, );
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgba(14, 165, 233, .5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000
+        }
+        :root {
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4
+        }
+        body {
+            margin: 0;
+            font-family: inherit;
+            line-height: inherit
+        }
+        html {
+            -webkit-text-size-adjust: 100%;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+            line-height: 1.5
+        }
+        h1, p {
+            margin: 0
+        }
+        h1 {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div id="__nuxt" style="height: auto !important;">
+        <div class="font-sans antialiased bg-white dark:bg-black text-black dark:text-white grid min-h-screen place-content-center overflow-hidden">
+            <div class="fixed -bottom-1/2 left-0 right-0 h-1/2 spotlight"></div>
+            <div class="max-w-520px text-center">
+                <h1 class="text-8xl sm:text-10xl font-medium mb-8">404</h1>
+                <p class="text-xl px-8 sm:px-0 sm:text-4xl font-light mb-16 leading-tight">Page not found - The requested resource doesn't exist</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 添加一些随机移动的小圆点作为背景装饰
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('#__nuxt');
+            const colors = ['#00bcd4', '#673ab7', '#3f51b5', '#2196f3', '#03a9f4'];
+            
+            for (let i = 0; i < 15; i++) {
+                const dot = document.createElement('div');
+                dot.style.position = 'fixed';
+                dot.style.width = Math.random() * 20 + 5 + 'px';
+                dot.style.height = dot.style.width;
+                dot.style.borderRadius = '50%';
+                dot.style.background = colors[Math.floor(Math.random() * colors.length)];
+                dot.style.opacity = Math.random() * 0.5 + 0.3;
+                dot.style.left = Math.random() * 100 + 'vw';
+                dot.style.top = Math.random() * 100 + 'vh';
+                dot.style.filter = 'blur(' + (Math.random() * 5 + 2) + 'px)';
+                dot.style.zIndex = '-1';
+                
+                // 动画 - 只移动背景元素
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                dot.style.animation = `float ${duration}s ${delay}s ease-in-out infinite`;
+                
+                container.appendChild(dot);
+            }
+        });
+    </script>
+    
+    <style>
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(5vw, -5vh);
+            }
+            50% {
+                transform: translate(10vw, 0);
+            }
+            75% {
+                transform: translate(5vw, 5vh);
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,241 +1,466 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentha - 我的世界中国版开发者</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
 
-        body {
-            font-family: 'Microsoft YaHei', sans-serif;
-            background: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-        }
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Minecraft Developer Portfolio</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+      <!-- Place favicon.ico in the root directory -->
+      <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+      <!-- CSS here -->
+      <link rel="stylesheet" href="assets/css/bootstrap.css">
+      <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+      <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+      <link rel="stylesheet" href="assets/css/magnific-popup.css">
+      <link rel="stylesheet" href="assets/css/spacing.css">
+      <link rel="stylesheet" href="assets/css/main.css">
+   </head>
 
-        .avatar {
-            width: 100px;
-            height: 100px;
-            background: #4CAF50;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            font-weight: bold;
-            color: white;
-        }
+   <body>
 
-        .name {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
+      <!-- Preloader Start -->
+      <div class="preloader med-loading">
+         <div class="loader"></div>
+      </div>
+      <!-- Preloader End -->
+       
+      <!-- light-dark-switch -->
+      <div class="tp-dark-switch-wrap">
+         <button class="tp-dark-switch p-relative">
+            <i class="moon fa-light fa-moon"></i>
+            <i class="sun fa-light fa-sun-bright"></i>
+         </button>
+      </div>
 
-        .title {
-            font-size: 1.1rem;
-            color: #666;
-        }
 
-        .section {
-            background: white;
-            padding: 30px;
-            margin: 30px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+      <main>
 
-        .section h2 {
-            color: #4CAF50;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .skill {
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 5px;
-            border-left: 4px solid #4CAF50;
-        }
-
-        .skill h3 {
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .project {
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 5px;
-            border: 1px solid #e0e0e0;
-        }
-
-        .project h3 {
-            color: #4CAF50;
-            margin-bottom: 10px;
-        }
-
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .stat {
-            flex: 1;
-            min-width: 120px;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #4CAF50;
-            display: block;
-        }
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact-btn {
-            display: inline-block;
-            background: #4CAF50;
-            color: white;
-            padding: 12px 24px;
-            margin: 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-
-        .contact-btn:hover {
-            background: #45a049;
-        }
-
-        @media (max-width: 600px) {
-            .name {
-                font-size: 2rem;
-            }
-            
-            .skills,
-            .projects {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                flex-direction: column;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="avatar">M</div>
-            <h1 class="name">Mentha</h1>
-            <p class="title">我的世界中国版开发者</p>
-        </div>
-
-        <div class="section">
-            <h2>关于我</h2>
-            <p>专注于《我的世界》中国版的模组和插件开发，致力于为玩家创造更好的游戏体验。拥有多年开发经验，熟悉各种开发技术和工具。</p>
-        </div>
-
-        <div class="section">
-            <h2>专业技能</h2>
-            <div class="skills">
-                <div class="skill">
-                    <h3>模组开发</h3>
-                    <p>Forge/Fabric模组开发</p>
-                </div>
-                <div class="skill">
-                    <h3>插件开发</h3>
-                    <p>服务器插件和工具</p>
-                </div>
-                <div class="skill">
-                    <h3>性能优化</h3>
-                    <p>游戏性能调优</p>
-                </div>
-                <div class="skill">
-                    <h3>UI设计</h3>
-                    <p>用户界面开发</p>
-                </div>
+         <!-- tp-main-area-start -->
+         <div class="tp-home-area tp-home-spacing p-relative p-relative tp-home-svg-wrap z-index-1">
+            <div class="tp-home-svg-shape">
+               <svg width="1920" height="779" viewbox="0 0 1920 779" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_f_27_375)">
+                     <path class="line-1" d="M2087 308.5C1974 236.833 1691.4 145.6 1465 354C1182 614.5 1965.5 427.5 1556 207.5C1146.5 -12.5 788 331 762.5 490.5C737 650 1354.5 230 671.5 184.5C-11.5 139 381 -17.5 588 83.5C795 184.5 286.5 834 -62 543.5C-410.5 253 492 414.5 176 905" stroke="white" stroke-opacity="0.06" stroke-width="40"></path>
+                  </g>
+                  <defs>
+                     <filter id="filter0_f_27_375" x="-193.436" y="0.173615" width="2321.15" height="945.658" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="15" result="effect1_foregroundBlur_27_375"></fegaussianblur>
+                     </filter>
+                  </defs>
+               </svg>
             </div>
-        </div>
-
-        <div class="section">
-            <h2>主要项目</h2>
-            <div class="projects">
-                <div class="project">
-                    <h3>建筑助手模组</h3>
-                    <p>简化建筑过程的实用工具模组</p>
-                </div>
-                <div class="project">
-                    <h3>RPG系统</h3>
-                    <p>为游戏添加RPG元素和技能系统</p>
-                </div>
-                <div class="project">
-                    <h3>服务器管理插件</h3>
-                    <p>提升服务器管理效率的工具集</p>
-                </div>
+            <div class="container-fluid">
+               <div class="row gx-16">
+                  <div class="col-xl-7">
+                     <div class="row gx-16">
+                        <div class="col-lg-3 col-md-3 col-sm-5 mb-15">
+                           <div class="tp-home-author-thumb tp-round-10  tp-home-author-shadow p-relative h-100 fix">
+                              <img class="tp-round-10 w-100" src="assets/img/author/thumb.jpg" alt="">
+                           </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-7 mb-15">
+                           <div class="tp-home-author-name p-relative z-index-1 tp-round-10 border-full h-100">
+                              <img class="tp-home-bg-position" src="assets/img/author/noice.png" alt="">
+                              <div>
+                                 <h2 class="tp-home-author-title fw-500 tp-text-common-white">Hi, I'm a Mentha</h2>
+                                 <p>Specializing in custom plugins, mods, and server development<br>
+                                    Creating immersive experiences since 2020</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-5">
+                     <div class="row gx-16">
+                        <div class="col-lg-7 col-md-7 mb-15">
+                           <div class="tp-home-project-wrap p-relative bg-position z-index-1 tp-round-10 h-100" data-background="assets/img/project/bg.jpg">
+                              <div class="tp-home-project-contect darktitle">
+                                 <a href="#" onclick="return false" class="tp-home-project-icon mb-15">
+                                    <svg width="17" height="14" viewbox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.80005 1L16 7.00005L9.80005 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                       <path d="M1 6.99854H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                 </a>
+                                 <h2 class="tp-home-title fw-500 tp-text-common-white"><a class="underline-white" href="#" onclick="return false">Blocky Adventures</a></h2>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 mb-15">
+                           <div class="tp-home-resorces-wrap p-relative z-index-1 tp-round-10 h-100">
+                              <img class="tp-home-bg-position" src="assets/img/resorces/bg.jpg" alt="">
+                              <span class="tp-home-subtitle mb-15">RESORCES</span>
+                              <h2 class="tp-home-title fw-500 tp-text-common-white mb-60"><a class="underline-white" href="#" onclick="return false">Tools to accelerate<br> your workflow.</a></h2>
+                              <a href="#" onclick="return false">
+                                 <img class="icon-1" src="assets/img/resorces/icon.png" alt="">
+                                 <img class="d-none icon-2" src="assets/img/resorces/icon-2.png" alt="">
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-7">
+                     <div class="row gx-16">
+                        <div class="col-xl-9 col-lg-7 col-md-7 mb-15">
+                           <div class="tp-home-about-wrap p-relative z-index-1 tp-round-10 border-full h-100">
+                              <img class="tp-home-bg-position" src="assets/img/about/thumb.png" alt="">
+                              <span class="tp-home-subtitle d-block text-end mb-40">ABOUT</span>
+                              <h2 class="tp-home-title fw-500 tp-text-common-white mb-25">Passionate about Minecraft development and creating<br>
+                                 unique gameplay experiences through code.</h2>
+                              <a class="tp-home-btn underline-green" href="#" onclick="return false">Read more about</a>
+                           </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-5 col-md-5 mb-15">
+                           <div class="tp-home-blog-wrap p-relative z-index-1 tp-round-10 border-full h-100">
+                              <img class="tp-home-bg-position" src="assets/img/about/thumb.png" alt="">
+                              <div class="text-center mb-40">
+                                 <img src="assets/img/blog/blog.png" alt="">
+                              </div>
+                              <h2 class="tp-home-title fw-500 tp-text-common-white mb-10"><a class="underline-white" href="#" onclick="return false">Minecraft 1.21 Update</a></h2>
+                              <span class="tp-home-subtitle">BLOG</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-5">
+                     <div class="row gx-16">
+                        <div class="col-lg-7 col-md-7">
+                           <div class="tp-home-social-wrap  h-100">
+                              <div class="tp-home-social-item p-relative z-index-1 tp-round-10 border-full">
+                                 <img class="tp-home-bg-position" src="assets/img/social/bg.png" alt="">
+                                 <div class="tp-home-social-hover-shadow">
+                                    <img class="tp-round-10" src="assets/img/social/bg-2.png" alt="">
+                                 </div>
+                                 <a class="tp-home-social-icon-wrap p-relative" href="#" onclick="return false">
+                                    <span class="tp-home-social-icon">
+                                       <svg width="23" height="24" viewbox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M13.6881 10.1624L22.2504 0H20.2214L12.7868 8.82384L6.84879 0H0L8.97943 13.3432L0 24H2.0291L9.88025 14.6817L16.1512 24H23L13.6876 10.1624H13.6881ZM10.909 13.4608L9.99919 12.1321L2.76021 1.55961H5.87679L11.7187 10.0919L12.6285 11.4206L20.2224 22.5113H17.1058L10.909 13.4613V13.4608Z" fill="currentColor"></path>
+                                       </svg>
+                                    </span>
+                                    <div class="tp-home-social-content d-flex">
+                                       <div class="animate-right d-flex align-items-start">
+                                          <span class="mr-10">Twitter</span>
+                                          <span class="mr-10">Twitter</span>
+                                          <span class="mr-10">Twitter</span>
+                                       </div>
+                                       <div class="animate-right d-flex align-items-start">
+                                          <span class="mr-10">Twitter</span>
+                                          <span class="mr-10">Twitter</span>
+                                          <span class="mr-10">Twitter</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="tp-home-social-item p-relative z-index-1 tp-round-10 border-full">
+                                 <img class="tp-home-bg-position" src="assets/img/social/bg.png" alt="">
+                                 <div class="tp-home-social-hover-shadow">
+                                    <img class="tp-round-10" src="assets/img/social/bg-2.png" alt="">
+                                 </div>
+                                 <a class="tp-home-social-icon-wrap p-relative" href="#" onclick="return false">
+                                    <span class="tp-home-social-icon">
+                                       <svg width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M13 25C19.6274 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13C1 19.6274 6.37258 25 13 25Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path d="M9.08337 1.64005C13.5634 8.20004 17.0834 15.48 19.4034 23.16" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path d="M1.08337 11.88C7.80337 12.52 15.0834 10.28 22.2834 5.39999" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path d="M4.76038 21.72C8.60038 16.44 14.6804 13 21.4004 13C22.6004 13 23.8004 13.08 25.0004 13.32" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                       </svg>
+                                    </span>
+                                    <div class="tp-home-social-content d-flex">
+                                       <div class="animate-right d-flex align-items-start">
+                                          <span class="mr-10">Dribbble</span>
+                                          <span class="mr-10">Dribbble</span>
+                                          <span class="mr-10">Dribbble</span>
+                                       </div>
+                                       <div class="animate-right d-flex align-items-start">
+                                          <span class="mr-10">Dribbble</span>
+                                          <span class="mr-10">Dribbble</span>
+                                          <span class="mr-10">Dribbble</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="tp-home-social-item p-relative z-index-1 tp-round-10 border-full">
+                                 <img class="tp-home-bg-position" src="assets/img/social/bg.png" alt="">
+                                 <div class="tp-home-social-hover-shadow">
+                                    <img class="tp-round-10" src="assets/img/social/bg-2.png" alt="">
+                                 </div>
+                                 <a class="tp-home-social-icon-wrap p-relative" href="#" onclick="return false">
+                                    <span class="tp-home-social-icon">
+                                       <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M17.5034 0H6.49658C2.91431 0 0 2.91431 0 6.49658V17.5036C0 21.0857 2.91431 24 6.49658 24H17.5036C21.0857 24 24 21.0857 24 17.5036V6.49658C24 2.91431 21.0857 0 17.5034 0ZM22.593 17.5036C22.593 20.3099 20.3099 22.593 17.5034 22.593H6.49658C3.69012 22.593 1.40698 20.3099 1.40698 17.5036V6.49658C1.40698 3.69012 3.69012 1.40698 6.49658 1.40698H17.5036C20.3099 1.40698 22.593 3.69012 22.593 6.49658V17.5036Z" fill="currentColor"></path>
+                                          <path d="M11.9998 5.43765C8.38129 5.43765 5.4375 8.38144 5.4375 12C5.4375 15.6185 8.38129 18.5623 11.9998 18.5623C15.6183 18.5623 18.5621 15.6185 18.5621 12C18.5621 8.38144 15.6183 5.43765 11.9998 5.43765ZM11.9998 17.1553C9.15729 17.1553 6.84448 14.8427 6.84448 12C6.84448 9.15744 9.15729 6.84464 11.9998 6.84464C14.8425 6.84464 17.1552 9.15744 17.1552 12C17.1552 14.8427 14.8425 17.1553 11.9998 17.1553Z" fill="currentColor"></path>
+                                          <path d="M18.7178 3.10709C17.6484 3.10709 16.7787 3.97702 16.7787 5.04617C16.7787 6.11551 17.6484 6.98544 18.7178 6.98544C19.7871 6.98544 20.657 6.11551 20.657 5.04617C20.657 3.97684 19.7871 3.10709 18.7178 3.10709ZM18.7178 5.57828C18.4244 5.57828 18.1857 5.33951 18.1857 5.04617C18.1857 4.75266 18.4244 4.51407 18.7178 4.51407C19.0113 4.51407 19.2501 4.75266 19.2501 5.04617C19.2501 5.33951 19.0113 5.57828 18.7178 5.57828Z" fill="currentColor"></path>
+                                       </svg>
+                                    </span>
+                                    <div class="tp-home-social-content d-flex">
+                                       <div class="animate-right d-flex align-items-start">
+                                          <span class="mr-10">Instagram</span>
+                                          <span class="mr-10">Instagram</span>
+                                          <span class="mr-10">Instagram</span>
+                                       </div>
+                                       <div class="animate-right d-flex align-items-start">
+                                          <span class="mr-10">Instagram</span>
+                                          <span class="mr-10">Instagram</span>
+                                          <span class="mr-10">Instagram</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="tp-home-social-item p-relative z-index-1 tp-round-10 border-full">
+                                 <img class="tp-home-bg-position" src="assets/img/social/bg.png" alt="">
+                                 <div class="tp-home-social-hover-shadow">
+                                    <img class="tp-round-10" src="assets/img/social/bg-2.png" alt="">
+                                 </div>
+                                 <a class="tp-home-social-icon-wrap p-relative" href="#" onclick="return false">
+                                    <span class="tp-home-social-icon">
+                                       <svg width="29" height="24" viewbox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M14.3165 24C12.0758 24 10.4007 21.7801 9.73553 19.5754L6.271 8.16163C6.14217 7.73958 5.81013 7.40629 5.38286 7.27007C4.95537 7.13386 4.4871 7.21207 4.12973 7.47923L2.56966 8.64915L0 5.28945L5.81976 0.924834C7.06168 -0.00912217 8.70466 -0.25453 10.1735 0.274734C11.6427 0.804218 12.7327 2.03433 13.0623 3.53468L15.2723 13.5312C15.4025 14.1235 15.8 15.001 16.3431 15.001C18.7673 15.001 21.0464 10.5089 21.0464 7.80175C21.0464 6.47629 19.9507 5.40194 18.599 5.40194C18.4684 5.40216 18.338 5.41205 18.209 5.43204L17.0697 5.61197L17.559 4.58442C18.8896 1.80233 21.704 0.00252209 24.7172 0.00252209C27.1567 0.00252209 29 1.8098 29 4.20214C29 11.0189 20.2205 24 14.3165 24ZM4.96343 6.00195C6.10991 6.00129 7.12083 6.73927 7.44885 7.81669L10.9131 19.2305C11.4332 20.9477 12.7257 22.8 14.3241 22.8C19.1038 22.8 27.7838 10.8088 27.7838 4.20214C27.7838 2.46231 26.4991 1.20232 24.7249 1.20232C22.4993 1.20232 20.404 2.37224 19.1574 4.23949C20.948 4.51302 22.269 6.02458 22.2699 7.80175C22.2699 10.7488 19.8228 16.2008 16.3431 16.2008C15.066 16.2008 14.3241 14.896 14.0716 13.786L11.8692 3.78954C11.6294 2.68905 10.8307 1.78585 9.75345 1.39763C8.67621 1.00964 7.47103 1.19067 6.5616 1.87725L1.7131 5.51443L2.81432 6.95436L3.3879 6.51935C3.84093 6.1821 4.39456 6.00019 4.96343 6.00195Z" fill="currentColor"></path>
+                                       </svg>
+                                    </span>
+                                    <div class="tp-home-social-content d-flex">
+                                       <div class="animate-right d-flex align-items-start">
+                                          <span class="mr-10">Vimeo</span>
+                                          <span class="mr-10">Vimeo</span>
+                                          <span class="mr-10">Vimeo</span>
+                                       </div>
+                                       <div class="animate-right d-flex align-items-start">
+                                          <span class="mr-10">Vimeo</span>
+                                          <span class="mr-10">Vimeo</span>
+                                          <span class="mr-10">Vimeo</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="tp-home-social-item p-relative z-index-1 tp-round-10 border-full">
+                                 <img class="tp-home-bg-position" src="assets/img/social/bg.png" alt="">
+                                 <div class="tp-home-social-hover-shadow">
+                                    <img class="tp-round-10" src="assets/img/social/bg-2.png" alt="">
+                                 </div>
+                                 <a class="tp-home-social-icon-wrap p-relative" href="#" onclick="return false">
+                                    <span class="tp-home-social-icon">
+                                       <svg width="17" height="28" viewbox="0 0 17 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M14.0207 5.00495H16.7604V0.00304437H11.7815C11.3662 -0.0142373 6.30322 -0.111015 4.99096 4.89319C4.97195 4.94562 4.55258 6.13575 4.55258 8.9158L0 8.92963V14.1758L4.55834 14.1625V28H11.5211V14.1746H16.1296V8.91465H11.5211V7.25964C11.5211 6.2308 11.9549 5.00495 14.0207 5.00495ZM14.9775 10.0662V13.0219H10.369V26.8473H5.71045V13.007L1.15211 13.0202V10.0783L5.72255 10.065L5.71045 9.47919C5.65054 6.53438 6.07049 5.29586 6.0895 5.23652C7.22203 0.926464 11.5465 1.14306 11.732 1.15458L15.6083 1.15573V3.85341H14.0207C11.3287 3.85341 10.3696 5.61269 10.3696 7.25906V10.0662H14.9775Z" fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                    <div class="tp-home-social-content d-flex">
+                                       <div class="animate-right d-flex align-items-start">
+                                          <span class="mr-10">Facebook</span>
+                                          <span class="mr-10">Facebook</span>
+                                          <span class="mr-10">Facebook</span>
+                                       </div>
+                                       <div class="animate-right d-flex align-items-start">
+                                          <span class="mr-10">Facebook</span>
+                                          <span class="mr-10">Facebook</span>
+                                          <span class="mr-10">Facebook</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="tp-home-social-item p-relative z-index-1 tp-round-10 border-full">
+                                 <img class="tp-home-bg-position" src="assets/img/social/bg.png" alt="">
+                                 <div class="tp-home-social-hover-shadow">
+                                    <img class="tp-round-10" src="assets/img/social/bg-2.png" alt="">
+                                 </div>
+                                 <a class="tp-home-social-icon-wrap p-relative" href="#" onclick="return false">
+                                    <span class="tp-home-social-icon">
+                                       <svg width="22" height="24" viewbox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M7.733 24C5.99602 24 4.35785 23.4427 2.99558 22.388C2.74112 22.1911 2.49644 21.9759 2.26807 21.7491C0.677903 20.1684 -0.122308 18.0633 0.0151773 15.8212C0.119107 14.1267 0.797679 12.4931 1.92692 11.2214C3.42248 9.53719 5.4843 8.60953 7.73347 8.60953C8.11982 8.60953 8.50991 8.63859 8.89394 8.69578L9.49048 8.78484V14.1094L8.57189 13.8042C8.30438 13.7152 8.02615 13.6702 7.74465 13.6702C7.03346 13.6702 6.36747 13.9505 5.86926 14.4591C5.37338 14.9653 5.10633 15.6347 5.11658 16.3448C5.1301 17.2603 5.60967 18.09 6.39916 18.5653C6.76268 18.7838 7.17653 18.9117 7.59691 18.9352C7.92874 18.9534 8.25638 18.9098 8.57143 18.8053C9.64847 18.4477 10.3723 17.4427 10.3723 16.305L10.3769 10.7831V0H15.4364L15.4424 0.696562C15.4452 1.01203 15.4774 1.3275 15.538 1.63313C15.7757 2.835 16.4458 3.90609 17.425 4.64859C18.2942 5.30813 19.3316 5.65641 20.4241 5.65641C20.4497 5.65641 20.4497 5.65641 20.6832 5.67281L21.3333 5.71875V10.0312V10.7344L21.1003 10.7339H20.6357C20.6319 10.7339 20.6282 10.7339 20.624 10.7339H20.4008C20.3998 10.7339 20.3984 10.7339 20.397 10.7339C19.0497 10.7339 17.7871 10.4756 16.5358 9.94453C16.163 9.78609 15.7999 9.60516 15.4494 9.40313L15.4653 16.3317C15.4569 18.3811 14.6515 20.3034 13.1979 21.7486C12.0183 22.9209 10.5298 23.67 8.893 23.9137C8.51131 23.9709 8.12122 24 7.733 24ZM7.733 10.0158C5.8879 10.0158 4.19613 10.7766 2.96948 12.158C2.04856 13.1953 1.49489 14.527 1.41007 15.9075C1.29822 17.738 1.95162 19.4573 3.25051 20.7483C3.43833 20.9348 3.6392 21.1116 3.84799 21.2733C4.96372 22.1372 6.30735 22.5938 7.733 22.5938C8.05271 22.5938 8.37382 22.5698 8.68841 22.523C10.0292 22.3233 11.2489 21.7097 12.2155 20.7488C13.403 19.5684 14.0606 17.9995 14.0676 16.3308L14.0457 6.65625L15.1749 7.53234C15.758 7.98469 16.3992 8.36063 17.0801 8.64984C18.0108 9.045 18.949 9.26437 19.9347 9.31641V7.04531C18.7164 6.95344 17.5658 6.51797 16.5829 5.77219C15.3292 4.82156 14.4712 3.44906 14.1664 1.90828C14.1338 1.74281 14.1072 1.57547 14.0876 1.40672H11.7746V10.7836L11.7699 16.3055C11.7699 18.0506 10.6607 19.5919 9.00952 20.1403C8.52808 20.3002 8.02708 20.3667 7.52001 20.3391C6.87407 20.3034 6.23837 20.107 5.68097 19.7719C4.4725 19.0448 3.73847 17.7712 3.71796 16.3655C3.70212 15.2761 4.11178 14.2486 4.87237 13.4719C5.6353 12.6928 6.65502 12.2639 7.74372 12.2639C7.86023 12.2639 7.97581 12.2691 8.09139 12.2789V10.0256C7.97208 10.0191 7.85231 10.0158 7.733 10.0158Z" fill="currentColor"></path>
+                                       </svg>
+                                    </span>
+                                    <div class="tp-home-social-content d-flex">
+                                       <div class="animate-right d-flex align-items-start">
+                                          <span class="mr-10">TikTok</span>
+                                          <span class="mr-10">TikTok</span>
+                                          <span class="mr-10">TikTok</span>
+                                       </div>
+                                       <div class="animate-right d-flex align-items-start">
+                                          <span class="mr-10">TikTok</span>
+                                          <span class="mr-10">TikTok</span>
+                                          <span class="mr-10">TikTok</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 mb-15">
+                           <div class="tp-home-banner-thumb h-100">
+                              <img class="tp-round-10 w-100" src="assets/img/banner/bg.jpg" alt="">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-7 col-md-7 mb-15">
+                     <div class="tp-home-software-wrap p-relative z-index-1 fix tp-round-10 border-full h-100">
+                        <img class="tp-home-bg-position" src="assets/img/software/bg.png" alt="">
+                        <span class="tp-home-software-shape"></span>
+                        <span class="tp-home-software-shape-2"></span>
+                        <h2 class="tp-home-title fw-500 tp-text-common-white mb-55 ml-60 p-relative z-index-1"><a href="#" onclick="return false">Stack I utilize.</a></h2>
+                        <div class="tp-home-software-slider d-flex">
+                           <div class="animate-right d-flex align-items-start">
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/figma.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/ai.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/ico.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/ico.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/ps.png" alt="">
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="animate-right d-flex align-items-start">
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/figma.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/ico.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/ps.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/ai.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/ico.png" alt="">
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="animate-right d-flex align-items-start">
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/figma.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/ico.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/ps.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/ai.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="tp-home-software-item">
+                                 <a class="tp-home-software-icon" href="#" onclick="return false">
+                                    <img src="assets/img/software/ico.png" alt="">
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-2 col-lg-5 col-md-5 mb-15">
+                     <div class="tp-home-banner-2-wrap h-100">
+                        <img class="w-100 tp-round-10" src="assets/img/banner/bg-2.jpg" alt="">
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-6 col-md-6 mb-15">
+                     <div class="tp-home-service-wrap tp-round-10 p-relative z-index-1 border-full h-100">
+                        <img class="tp-home-bg-position" src="assets/img/service/bg.png" alt="">
+                        <div class="swiper-container tp-home-service-active">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                 <div class="tp-home-service-item">
+                                    <span class="tp-home-subtitle mb-25">SERVICE 01</span>
+                                    <h2 class="tp-home-title fw-500 tp-text-common-white mb-10"><a class="underline-white" href="#" onclick="return false">Plugin Development</a></h2>
+                                    <p>Custom Minecraft plugins tailored to your server's needs, 
+                                       from minigames to economy systems</p>
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="tp-home-service-item">
+                                    <span class="tp-home-subtitle mb-25">SERVICE 02</span>
+                                    <h2 class="tp-home-title fw-500 tp-text-common-white mb-10"><a class="underline-white" href="#" onclick="return false">Mod Development</a></h2>
+                                    <p>Custom mods that enhance gameplay with new features, 
+                                       items, and mechanics</p>
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="tp-home-service-item">
+                                    <span class="tp-home-subtitle mb-25">SERVICE 03</span>
+                                    <h2 class="tp-home-title fw-500 tp-text-common-white mb-10"><a class="underline-white" href="#" onclick="return false">Server Setup</a></h2>
+                                    <p>Complete Minecraft server setup and configuration 
+                                       for optimal performance</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="tp-home-service-pagination mt-15"></div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-6 col-md-6 mb-15">
+                     <div class="tp-home-contact-wrap p-relative z-index-1 text-center fix tp-round-10 border-full h-100">
+                        <img class="tp-home-bg-position" src="assets/img/contact/bg.png" alt="">
+                        <span class="tp-home-contact-shape p-absolute"></span>
+                       <span class="tp-home-contact-shape-2 p-absolute"></span>
+                        <h2 class="tp-home-contact-title mb-25 p-relative z-index-1">Let's build something <span>amazing</span></h2>
+                        <a href="#" onclick="return false" class="tp-home-project-icon p-relative z-index-1">
+                           <svg width="17" height="14" viewbox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9.80005 1L16 7.00005L9.80005 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M1 6.99854H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                           </svg>
+                        </a>
+                        <div class="tp-home-contact-slide pt-25">
+                           <div class="animate-right d-flex align-items-start">
+                              <p class="mb-0">Ready to create your dream Minecraft experience</p>
+                              <p class="mb-0">Expert Minecraft development services available</p>
+                              <p class="mb-0">Let's collaborate on your next Minecraft project</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
+         </div>
+         <!-- tp-main-area-end -->
 
-        <div class="section">
-            <h2>数据统计</h2>
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number">30+</span>
-                    <span>发布项目</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">500K+</span>
-                    <span>下载量</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">3年+</span>
-                    <span>开发经验</span>
-                </div>
-            </div>
-        </div>
+      </main>
 
-        <div class="section contact">
-            <h2>联系我</h2>
-            <a href="#" class="contact-btn">邮箱</a>
-            <a href="#" class="contact-btn">QQ</a>
-            <a href="#" class="contact-btn">GitHub</a>
-        </div>
-    </div>
-</body>
+
+      <!-- JS here -->
+      <script src="assets/js/vendor/jquery.js"></script>
+      <script src="assets/js/bootstrap-bundle.js"></script>
+      <script src="assets/js/swiper-bundle.js"></script>
+      <script src="assets/js/ajax-form.js"></script>
+      <script src="assets/js/magnific-popup.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+
 </html>
